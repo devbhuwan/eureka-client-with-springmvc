@@ -139,13 +139,4 @@
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <id>runEurekaServer</id>
-        </profile>
-        <profile>
-            <id>runEurekaClient</id>
-        </profile>
-    </profiles>
-
 </project>
