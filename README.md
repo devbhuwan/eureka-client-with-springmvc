@@ -11,3 +11,6 @@ mvn clean jetty:run-war
 ``
 mvn tomcat7:run
 ``
+
+- Eureka Server Snapshot after service registration
+![Eureka Server Snapshot](https://github.com/developerpapers/eureka-client-with-springmvc/blob/master/eureka-server.png)
