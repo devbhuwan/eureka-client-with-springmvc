@@ -20,7 +20,7 @@ import static io.github.devbhuwan.eurekaclientwithspringmvc.rest.RESTMyService.S
 @Path(SERVICE_ROOT_URL)
 public class RESTMyService {
 
-    public static final String ROOT_PATH = "/rest";
+    public static final String ROOT_PATH = "/eureka-client/rest";
     public static final String SERVICE_ROOT_URL = "/myservice";
     private final String serviceIp;
     private final String serviceAppGroup;
@@ -43,7 +43,7 @@ public class RESTMyService {
         ConfigurationManager.getConfigInstance()
                 .setProperty("eureka.region", "default");
         ConfigurationManager.getConfigInstance()
-                .setProperty("eureka.serviceUrl.default", "http://localhost:8085/eureka/v2/");
+                .setProperty("eureka.serviceUrl.default", "http://localhost:8080/eureka/v2/");
     }
 
     /* service - 1 */
@@ -98,7 +98,7 @@ public class RESTMyService {
                 .setAppGroupName(serviceAppGroup)
                 .setDataCenterInfo(new MyDataCenterInfo(DataCenterInfo.Name.MyOwn))
                 .setHostName(serviceHostname) /*SERVICE HOST NAME*/
-                .setInstanceId(serviceName + "_" + System.nanoTime())
+                .setInstanceId(serviceName + "_server1")
                 .setPort(servicePort) /*SERVICE HOST SERVER PORT*/
                 .setVIPAddress(serviceName)
                 .setHealthCheckUrls(ROOT_PATH + SERVICE_ROOT_URL + "/healthCheck", null, null) /*SERVICE HEALTH CHECK URL*/
