@@ -1,1 +1,1 @@
-# eurekaclientwithspringmvc
+# eureka client in spring mvc project 
